@@ -1,0 +1,6 @@
+def debug(my_func):
+    def wrapper(*args, **kwargs):
+        print(f"Function called", my_func.__name__, args, kwargs)
+        result = my_func(*args, **kwargs)
+        print(result)
+    return wrapper
